@@ -10,11 +10,8 @@ auth = input("Do you use multi-factor authentication? ")
 enc = input("Do you know how to encrypt sensitive information? ")
 
 # Determine if the user has good security habits and output a message informing the user if they do have good habits
-if (phish=='y'):
-    if (pw=='y'):
-        if (auth=='y'):
-            if (enc=='y'):
-                print("You have good security habits.")
+if (phish=='y' and pw=='y' and auth=='y' and enc=='y'):
+    print("You have good security habits.")
 
 # Output a message informing the user they don't have good security habits
 else:
