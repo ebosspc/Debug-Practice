@@ -1,7 +1,3 @@
-# a215_multi_factor.py
-import tkinter as tk
-import multifactorgui as mfg
-
 # Print inputting instructions for the user
 print("Welcome to the multifactor gui interface.")
 print("Below you will be asked for a username and password. ")
@@ -57,20 +53,3 @@ while valid_creds == 0:
     # Get the user's username and password and check if they meet the requirements
     get_usr_credentials()
     check_credentials()
-
-# create a multi-factor interface to a restircted app
-my_auth = mfg.MultiFactorAuth()
-
-# Set the authorization
-my_auth.set_authorization(usr_username, usr_password)
-# confirm authorization info
-auth_info = my_auth.get_authorization()
-print(auth_info)
-
-# set the users authentication information
-question = "What is your favorite color?"
-answer = "purple"
-my_auth.set_authentication(question, answer)
-
-# start the GUI
-my_auth.mainloop()
